@@ -1,0 +1,22 @@
+
+    <div class = "container writingArea">
+
+    <!-- Title: -->
+    <div class = "title">
+      <button class="btn btn-primary" ng-click="getPrompt()">Gimme a Prompt</button>
+      <div>
+        {{prompt.title}}
+      </div>
+    </div>
+
+    <!-- Content: -->
+    <!-- <div class = "content">
+      <textarea rows="50" cols="100" ng-model="prompt.entryContent"></textarea>
+    </div> -->
+
+    <summernote height="300" ng-model="prompt.entryContent"></summernote>
+
+    <!-- Saves to DB and redirects to /library -->
+    <a href="/library" class="btn btn-primary" ng-click="addWritingEntry()">Save to Library</a>
+
+  </div>   <!-- /.container /.writingArea-->

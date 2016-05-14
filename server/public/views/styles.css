@@ -1,0 +1,27 @@
+body {
+  font-family: 'Pompiere', cursive;
+  background-color: #FF8A5B;
+  color: #759898;
+}
+
+h1 {
+  font-family: 'Sacramento', cursive;
+  color: #EA526F;
+  font-size: 8em;
+  text-align: center;
+  padding-top: 200px;
+}
+
+h2 {
+  color: #FCEADE;
+  text-align: center;
+}
+
+form {
+  text-align: center;
+  padding-bottom: 100px;
+}
+
+.mainWrap {
+  background-color: #54BFC1;
+}

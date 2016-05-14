@@ -1,0 +1,27 @@
+<div class="container">
+  <h2> This page will style the writing in a non-editor way </h2>
+  <div class="well">
+    <!-- the 'view' in 'view.justObject...' is the controller as view -->
+      <h3>Title: {{view.justObject.title}}</h3>
+
+      <div ng-bind-html="view.deliberatelyTrustDangerousSnippet()"></div>
+      
+  </div>
+
+  <a href="/edit" class="btn btn-primary">Edit Selection</a>
+  <!-- route doesn't exist yet -->
+
+  <a href="/library" class="btn btn-primary">Return to Library</a>
+
+  <button class="btn btn-primary" ng-click="view.deleteSelection(view.justObject)">Delete Selection</button>
+
+
+</div> <!-- /.container -->
+
+
+<!-- example code:
+<div ng-controller="ExampleController">
+ <p ng-bind-html="myHTML"></p>
+</div>
+
+ -->

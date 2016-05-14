@@ -1,0 +1,26 @@
+<h1>hello from the library</h1>
+
+<h2>This will end up displaying the writing selections.</h2>
+<p> When you click on a selection, it will link you to the view page.</p>
+
+<div class="container">
+
+<div class="well row col-md-4" ng-repeat="each in writingList">
+
+  <h2>{{each.title}}</h2>
+
+  <!-- <div class = "entryContainer">
+    {{each.entryContent}}
+  </div> -->
+
+  <!-- For MVP I'm going to just make the library display the selection title.  -->
+
+
+  <!-- This works when using the controller:
+  <button class="btn btn-primary" ng-click="singleView(each)">View</button>
+    {{view}} -->
+
+<button class="btn btn-primary" ng-click="library.sendSingleView(each)">View</button>
+
+
+</div> <!-- /.container  -->
