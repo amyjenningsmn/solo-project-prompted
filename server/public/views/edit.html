@@ -1,27 +1,38 @@
+<!-- /write:
+
+<div class = "container writingArea">
+
+<div class = "title">
+  <button class="btn btn-primary" ng-click="getPrompt()">Gimme a Prompt</button>
+  <div>
+    {{prompt.title}}
+  </div>
+</div>
+
+<summernote height="300" ng-model="prompt.entryContent"></summernote>
+
+<a href="/library" class="btn btn-primary" ng-click="addWritingEntry()">Save to Library</a>
+
+-->
+
+
 <div class = "container editArea">
 
-<summernote></summernote>
 
-<h2>summernote directive</h2>
+<!-- <h4>focus</h4>
+<summernote focus></summernote> -->
 
-<h4>use element</h4>
-<summernote></summernote>
+<!-- Tried many things, none worked:  -->
 
-<h4>use attribute</h4>
-<div summernote></div>
+<!-- <summernote height="300" ng-model="prompt.entryContent" > -->
 
-<h2>summernote options</h2>
+<!-- *** This caused an infinite loop! Watch out: <summernote height="300" ng-model="edit.deliberatelyTrustDangerousSnippet()" > -->
 
-<h4>height</h4>
-<summernote height="300"></summernote>
+<!-- on-paste="paste(edit.deliberatelyTrustDangerousSnippet())" -->
 
-<h4>focus</h4>
-<summernote focus></summernote>
+<!-- <div ng-bind-html="edit.deliberatelyTrustDangerousSnippet()"></div>  -->
 
-<!-- Content: -->
-<!-- <div class = "content">
-  <textarea rows="50" cols="100" ng-model="prompt.entryContent"></textarea>
-</div> -->
+</summernote>
 
 <!-- Saves to DB and redirects to /library -->
 <a href="/library" class="btn btn-primary" ng-click="addWritingEntry()">Save to Library</a>

@@ -1,15 +1,15 @@
 <div class="container">
-  <h2> This page will style the writing in a non-editor way </h2>
+
   <div class="well">
     <!-- the 'view' in 'view.justObject...' is the controller as view -->
-      <h3>Title: {{view.justObject.title}}</h3>
+      <h3>{{view.justObject.title}}</h3>
 
       <div ng-bind-html="view.deliberatelyTrustDangerousSnippet()"></div>
-      
+
   </div>
 
-  <a href="/edit" class="btn btn-primary">Edit Selection</a>
-  <!-- route doesn't exist yet -->
+  <!-- <a href="/edit" class="btn btn-primary">Edit Selection</a> -->
+  <!-- route set up, not able to get text into editor, so not in use for MVP -->
 
   <a href="/library" class="btn btn-primary">Return to Library</a>
 

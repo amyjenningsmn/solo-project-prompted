@@ -31,7 +31,7 @@ app.config(['$routeProvider', '$locationProvider', '$sanitizeProvider',function(
 
     $locationProvider.html5Mode(true); //this allows us to take out the # in our html, need to add a companion 'base href' in the index.html for it to function
 
-    // $sanitize(html);
+
 // end app.config
 }])
 
@@ -42,7 +42,33 @@ app.controller('MainController', ['UserTrackService', '$scope', '$http', functio
   // this calls the service right away so we always have our user available.
   UserTrackService.getUserData();
   $scope.user = UserTrackService.user;
-}]);
+
+  // Trying to be able to capitalize 1st letter of every user.
+  // Not working yet, won't use in MVP
+  // $scope.result = UserTrackService.user;
+  // console.log('$scope.result'. $scope.result);
+  // $scope.info = $scope.result['info'];
+  // console.log('$scope.info', $scope.info);
+  // $scope.username = $scope.info['username'];
+  // $scope.user = capitalize($scope.username);
+
+  // Not sure if this works, based on 2nd function below::
+  // $scope.capitalize = function(input){
+  //   input = input.toLowerCase();
+  //   return input.substring(0,1).toUpperCase()+input.substring(1);
+  // }
+  // }]);
+
+//  Function I found online:
+//   app.filter('capitalize', function() {
+//   return function(input, scope) {
+//     if (input!=null)
+//     input = input.toLowerCase();
+//     return input.substring(0,1).toUpperCase()+input.substring(1);
+//   }
+// });
+
+
 
 // Write Controller:
 app.controller('WriteController', ['$scope', '$http', function($scope, $http){
@@ -129,17 +155,38 @@ app.controller('LibraryController', ['GetSingleViewService','$scope', '$http', f
     init();
 }]);
 
-// Edit Controller:
-app.controller('EditController', ['$scope', '$http', function($scope, $http){
+app.controller('EditController', ['GetSingleViewService','DeleteSelectedWriting','$scope', '$sce', '$http', function(GetSingleViewService, DeleteSelectedWriting, $scope, $sce, $http){
 
-  $scope.prompt = {};
+    var vm = this;
+    vm.data = GetSingleViewService.view;
+    console.log('vm.data.info:', vm.data.info);
 
-  $scope.addWritingEntry = function(){
-    console.log('addWritingEntry will add this entry:', $scope.prompt);
-    $http.post('/store', $scope.prompt).then(function(serverResponse){
-      console.log('added this entry to db:', serverResponse);
-    })
-  }
+    vm.getInfo = vm.data.info;
+    console.log('vm.getInfo:', vm.getInfo);
+
+    vm.justObject = vm.getInfo[0];
+    console.log('vm.justObject:', vm.justObject);
+    // ^^ Is there a more concise way to get this?
+
+    vm.justContent = vm.justObject['entryContent'];
+    console.log('vm.justContent:', vm.justContent);
+    // the string of html is: vm.justObject.entryContent
+
+    vm.snippet = vm.justContent;
+    vm.deliberatelyTrustDangerousSnippet = function() {
+      return $sce.trustAsHtml(vm.snippet);
+    };
+    // ^^^ example of how it works at angular $sanitize doc
+
+  // this is to save to db below:
+  // $scope.prompt = {};
+  //
+  // $scope.addWritingEntry = function(){
+  //   console.log('addWritingEntry will add this entry:', $scope.prompt);
+  //   $http.post('/store', $scope.prompt).then(function(serverResponse){
+  //     console.log('added this entry to db:', serverResponse);
+  //   })
+  // }
 
 }]);
 

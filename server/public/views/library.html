@@ -1,7 +1,4 @@
-<h1>hello from the library</h1>
-
-<h2>This will end up displaying the writing selections.</h2>
-<p> When you click on a selection, it will link you to the view page.</p>
+<h1>{{user.info.username}}'s Library</h1>
 
 <div class="container">
 
@@ -9,14 +6,15 @@
 
   <h2>{{each.title}}</h2>
 
-  <!-- <div class = "entryContainer">
+<!--
+  For MVP I'm going to just make the library display the selection title.
+  Old code below from when it was just a form vs. editor:
+
+  <div class = "entryContainer">
     {{each.entryContent}}
   </div> -->
 
-  <!-- For MVP I'm going to just make the library display the selection title.  -->
-
-
-  <!-- This works when using the controller:
+  <!-- Old old code from when just using the controller:
   <button class="btn btn-primary" ng-click="singleView(each)">View</button>
     {{view}} -->
 
