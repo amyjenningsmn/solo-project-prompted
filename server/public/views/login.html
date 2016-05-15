@@ -3,7 +3,6 @@
   <head>
     <meta charset="utf-8">
     <title>Prompted</title>
-
     <script src="vendors/jquery/jquery.min.js"></script>
     <!-- <script src="vendors/bootstrap/dist/js/bootstrap.min.js"></script> -->
     <script src="vendors/angular/angular.min.js"></script>
@@ -14,18 +13,19 @@
     <script src="vendors/angular-summernote/angular-summernote.js"></script>
     <script src="assets/scripts/angular-sanitize.min.js"></script>
     <script src="assets/scripts/client.min.js"></script>
-    <!-- <link href='https://fonts.googleapis.com/css?family=Sacramento' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Pompiere' rel='stylesheet' type='text/css'> -->
+    <link href='https://fonts.googleapis.com/css?family=Homemade+Apple' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="vendors/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="vendors/summernote/summernote.css">
-    <!-- <link rel="stylesheet" href="views/styles.css" /> -->
+    <link rel="stylesheet" href="views/styles.css" />
   </head>
-  <body class="container">
-    <div class = "mainWrap">
+  <body class="container-fluid">
+    <div class="jumbotron">
     <h1>Prompted</h1>
-    <h2>write a little everyday</h2>
-    <h2>Login</h2>
+    <h2 class="tagLine">write a little everyday</h2>
+
     <form action="/" method="POST">
+      <h2>Login</h2>
       <div>
         <label for="username">Username:</label>
         <input type="text" name="username" id="username"/>
@@ -38,8 +38,9 @@
 
 
     <div>
-        <input type="submit" value="Log In"/>
-        <a href="/register">Register</a>
+        <input type="submit" value="Log In" class="loginB"/></br>
+        <h3 class="newTo"> New to Prompted? </h3>
+        <a href="/register" class="regLink">Register</a>
       </div>
     </form>
   </div>

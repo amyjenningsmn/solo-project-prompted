@@ -1,5 +1,6 @@
 var app = angular.module('promptedApp', ['ngRoute', 'summernote', 'ngSanitize']);
 
+
 app.config(['$routeProvider', '$locationProvider', '$sanitizeProvider',function($routeProvider, $locationProvider, $sanitizeProvider){
   $routeProvider
     .when('/home', {

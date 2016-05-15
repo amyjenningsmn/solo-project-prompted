@@ -12,15 +12,16 @@
     <script src="vendors/angular-summernote/angular-summernote.js"></script>
     <script src="assets/scripts/angular-sanitize.min.js"></script>
     <script src="assets/scripts/client.min.js"></script>
-    <!-- <link href='https://fonts.googleapis.com/css?family=Sacramento' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Pompiere' rel='stylesheet' type='text/css'> -->
+    <link href='https://fonts.googleapis.com/css?family=Homemade+Apple' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="vendors/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="vendors/summernote/summernote.css">
-    <!-- <link rel="stylesheet" href="views/styles.css" /> -->
+    <link rel="stylesheet" href="views/styles.css" />
   </head>
-  <body class="container">
+  <body class="container-fluid">
+    <div class="jumbotron">
     <h1>Prompted Registration</h1>
-    <h2>write a little everyday</h2>
+    <h2 class="tagLine">write a little everyday</h2>
 
     <form action="/register" method="POST">
       <div>
@@ -34,9 +35,10 @@
       </div>
 
       <div>
-        <input type="submit" value="Register"/>
+        <input type="submit" value="Register" class="loginB"/>
       </div>
     </form>
+  </div>
 
   </body>
 </html>
