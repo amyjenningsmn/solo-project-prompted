@@ -59,3 +59,52 @@ label {
 input {
   font-size: 20px;
 }
+
+.home {
+  background-color: #FFBB4A;
+}
+
+.navbar {
+  background: #C5E8FD;
+}
+.navbar-default .navbar-nav>li>a {
+    color: #fff;
+    font-size: 25px;
+    text-shadow: 0px 1px 1px rgba(0,0,0,0.1),
+     0px 2px 5px rgba(0,0,0,0.1),
+     0px 0px 2px rgba(0,0,0,0.1);
+}
+
+.navbar-default .navbar-nav > li > a:focus, .navbar-default
+.navbar-nav > li > a:hover {
+	color:#42A2DC;
+	transition: background 0.2s ease;
+
+}
+
+.writeOn {
+  text-align: right;
+  padding-right: 15px;
+  color: #fff;
+  font-size: 20px;
+  text-shadow: 0px 1px 1px rgba(0,0,0,0.1),
+   0px 2px 5px rgba(0,0,0,0.1),
+   0px 0px 2px rgba(0,0,0,0.1);
+}
+
+.jumbotron .chooseLinks {
+  text-align: center;
+  padding-top: 263px;
+  font-family: 'Homemade Apple', cursive;
+  font-size: 45px;
+}
+
+.jumbotron .chooseLinks a {
+  color: #C64D56;
+}
+
+.jumbotron .chooseLinks a:hover {
+  color: #73B3D5;
+  transition: background 0.2s ease;
+  text-decoration: none;
+}

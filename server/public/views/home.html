@@ -3,15 +3,11 @@
   <head>
     <meta charset="utf-8">
     <title>Prompted</title>
-
     <script src="vendors/jquery/jquery.min.js"></script>
-
     <script src="vendors/angular/angular.min.js"></script>
     <script src="vendors/angular-ui-bootstrap/ui-bootstrap-tpls.js"></script>
     <script src="vendors/bootstrap/dist/js/bootstrap.min.js"></script>
-
     <script src="vendors/angular-route/angular-route.min.js"></script>
-
     <script src="vendors/summernote/summernote.min.js"></script>
     <script src="vendors/angular-summernote/angular-summernote.js"></script>
     <script src="assets/scripts/angular-sanitize.min.js"></script>
@@ -24,23 +20,23 @@
     <base href="/" />
     <!-- Defines base link we're looking for on our angular routes w/o # -->
   </head>
-  <body class="container" ng-controller="MainController">
+  <body class="container-fluid home" ng-controller="MainController">
 
     <nav class="navbar navbar-default">
-      <div class="container">
-        <ul class="nav navbar-nav">
+      <div class="container-fluid">
+        <ul class="nav navbar-nav navbar-left">
           <li>
-            <a href="/home">Prompted</a>
+            <a href="/home">PROMPTED</a>
           </li>
-          <li>
-            <p>Write on, {{user.info.username}}</p>
-          </li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
           <li>
             <a href="/logout" target="_self">Logout</a>
           </li>
         </ul>
       </div>
     </nav>
+    <h3 class="writeOn">Write on, {{user.info.username}}</h3>
 
     <div ng-view></div>
 
