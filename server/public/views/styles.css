@@ -108,3 +108,33 @@ input {
   transition: background 0.2s ease;
   text-decoration: none;
 }
+
+.libraryHeader {
+  padding-top: 50px;
+  padding-bottom: 25px;
+  font-size: 50px;
+  color: #C64D56;
+  text-shadow: 0px 0px 0px rgba(0,0,0,0.1),
+   0px 1px 1px rgba(0,0,0,0.1),
+   0px 0px 1px rgba(0,0,0,0.1);
+}
+
+div .well {
+  height: 350px;
+  width: 30%;
+  margin: 5px 30px 10px 0;
+  text-align: center;
+}
+
+.centerTitle {
+  text-align: center;
+  text-decoration: underline;
+}
+
+.displayWriting {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 6px;
+  margin-bottom: 25px;
+  font-size: 18px;
+}
