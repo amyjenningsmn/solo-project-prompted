@@ -20,7 +20,8 @@ var Writing =require('../models/writing');
 var app = express();
 
 //Mongo setup
-var mongoURI = "mongodb://localhost:27017/prompted";
+// var mongoURI = "mongodb://localhost:27017/prompted";
+var mongoURI = process.env.MONGODB_URI;
 var MongoDB = mongoose.connect(mongoURI).connection;
 
 MongoDB.on('error', function(err){
